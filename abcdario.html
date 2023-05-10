@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abecedario</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sass/styles.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand logo" href="./landing-page.html"><span class="span-logo">JavaScript/</span>NoteBook</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Main</a></li>
+                    <li class="nav-item "><a class="nav-link" href="./theory.html">Theory</a></li>
+                    <li class="nav-item dropdown hide-m"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Challenges</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./easy.html">Easy level</a></li>
+                            <li><a class="dropdown-item" href="./medium.html">Medium level</a></li>
+                            <li><a class="dropdown-item" href="./high.html">High level</a></li>
+                          </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </nav>
+    
+    <div class="container-fluid ajuste-top test-toda-pantalla">
+        <div class="row">
+            <div class="bg-aside col-lg-3 pt-4">
+                <aside class="visibility">
+                    <h2>List of challenges</h2>
+                    <hr>
+                    <div id="control-btn-group" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button id="btn-all" type="button" class="btn btn-primary">All</button>
+                        <button id="btn-easy" type="button" class="btn btn-success">Easy</button>
+                        <button id="btn-medium" type="button" class="btn btn-warning">Medium</button>
+                        <button id="btn-high" type="button" class="btn btn-danger">High</button>
+                    </div>
+                    <ul id="challenges_list" class="challenges_list">
+                        <li class="list active"><a href="./abcdario.html" >Abcdario</a><span>medium</span></li>
+                        <li class="list"><a href="./convert_html_entities.html">Convert HTML Entities </a><span>easy</span></li>
+                        <li class="list"><a href="./pig_latin.html">Pig Latin</a><span>medium</span></li>
+                        <li class="list"><a href="./search_and_replace.html">Search and Replace </a><span>medium</span></li>
+                        <li class="list"><a href="./sorted_union.html">Sorted Union</a><span>medium</span></li>
+                        <li class="list"><a href="./spinal_tap_case.html">Spinal Tap Case</a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_odd_fibonacci_numbers.html">Sum All Odd Fibonacci Numbers</a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_primes.html">Sum All Primes</a><span>easy</span></li>
+                        <li class="list"><a href="./roman_to_integer.html">Roman to Integer</a><span>easy</span></li>
+                        <li class="list"><a href="./sign_of_the_product_of_an_array.html">Sign of the Product of an Array</a><span>easy</span></li>
+                        <li class="list"><a href="./caesars_cipher.html">Caesars Cipher</a><span>high</span></li>
+                        <li class="list"><a href="./cash_register.html">Cash Register</a><span>high</span></li>
+                        <li class="list"><a href="./palindrome_checker.html">Palindrome Checker</a><span>high</span></li>
+                        <li class="list"><a href="./telephone_number_validator.html">Telephone Number Validator</a><span>high</span></li>
+                        <li class="list"><a href="./smallest_common_multiple.html">Smallest Common Multiple</a><span>high</span></li>
+
+                    </ul>
+                </aside>
+            </div>
+            <div class="main-page col-lg-9 pt-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container"><!--START SECCION PRINCIPAL DE LA PAGINA-->
+                            
+                            <h1 id="challenge">Abcdario <span>medium</span></h1>
+                            <hr>
+                            <p>Find the missing letter in the passed letter range and return it. If all letters are present in the range, return undefined.
+                            </p>
+                            <h2 id="test">Test</h2>
+                            <p>
+                                <span>Passed:</span> fearNotLetter("abce") should return the string d. <br>
+                                <span>Passed:</span> fearNotLetter("abcdefghjklmno") should return the string i. <br>
+                                <span>Passed:</span> fearNotLetter("stvwx") should return the string u. <br>
+                                <span>Passed:</span> fearNotLetter("bcdf") should return the string e. <br>
+                                <span>Passed:</span> fearNotLetter("abcdefghijklmnopqrstuvwxyz") should return undefined. <br>
+                            </p>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Proposed solution 1
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+<pre class="pre"><code class="adapt color">
+function fearNotLetter(str) {
+    const abcdario = "abcdefghijklmnopqrstuvwxyz";
+    let arrAbcdario =abcdario.split('');
+    let arrStr = str.split("");
+    let start = arrStr[0];
+    let end = arrStr[arrStr.length-1];
+    let segmento = [];
+
+    for(let i=arrAbcdario.indexOf(start); i&lt;=arrAbcdario.indexOf(end); i++){
+            segmento.push(arrAbcdario[i])
+    }
+    let missLetter = "";
+    for(let i=0; i&#60;segmento.length; i++){
+            if(arrStr.indexOf(segmento[i])==-1){
+                    return missLetter = segmento[i];
+            }
+    }
+}
+                                </code></pre>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Proposed solution 2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <pre class="pre"><code class="adapt"> 
+function fearNotLetter(str) {
+    for (let i = 0; i &lt; str.length; i++) {
+        const charCode = str.charCodeAt(i);
+        if (charCode !== str.charCodeAt(0) + i) {
+            return String.fromCharCode(charCode - 1);
+        }
+    }
+    return undefined;
+    }
+                                        </code></pre>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Proposed solution 3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <pre class="pre"><code class="adapt">
+    function fearNotLetter(str) {
+        let currCharCode = str.charCodeAt(0);
+        let missing = undefined;
+        str
+            .split("")
+            .forEach(letter => {
+                if (letter.charCodeAt(0) === currCharCode) {
+                            currCharCode++;
+                } else {
+                            missing = String.fromCharCode(currCharCode);
+                }
+            });
+        return missing;
+    }
+                                    </code></pre>
+                                </div>
+                                </div>
+                            </div>
+                            <section class="container parche"></section>
+                        </div><!--END MAIN SECTION -->
+                    </div> 
+                </div>
+                </div>
+            </div>
+        </div><!--end row-->       
+
+    </div> <!--End div main-container-->
+
+    <footer>
+        <p>JavaScript | NoteBook 2023 &#169; made by yoanDiaval</p> 
+    </footer>
+     
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>

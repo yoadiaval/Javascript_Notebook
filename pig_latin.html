@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Latin</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sass/styles.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand logo" href="./landing-page.html"><span class="span-logo">JavaScript/</span>NoteBook</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Main</a></li>
+                    <li class="nav-item "><a class="nav-link" href="./theory.html">Theory</a></li>
+                    <li class="nav-item dropdown hide-m"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Challenges</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./easy.html">Easy level</a></li>
+                            <li><a class="dropdown-item" href="./medium.html">Medium level</a></li>
+                            <li><a class="dropdown-item" href="./high.html">High level</a></li>
+                          </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </nav>
+    
+    <div class="container-fluid ajuste-top test-toda-pantalla">
+        <div class="row">
+            <div class="bg-aside col-lg-3 pt-4">
+                <aside class="visibility">
+                    <h2>List of challenges</h2>
+                    <hr>
+                    <div id="control-btn-group" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button id="btn-all" type="button" class="btn btn-primary">All</button>
+                        <button id="btn-easy" type="button" class="btn btn-success">Easy</button>
+                        <button id="btn-medium" type="button" class="btn btn-warning">Medium</button>
+                        <button id="btn-high" type="button" class="btn btn-danger">High</button>
+                    </div>
+                    <ul id="challenges_list" class="challenges_list">
+                        <li class="list"><a href="./abcdario.html" >Abcdario </a><span>medium</span></li>
+                        <li class="list"><a href="./convert_html_entities.html">Convert HTML Entities</a><span>easy</span></li>
+                        <li class="list active"><a href="./pig_latin.html">Pig Latin</a><span>medium</span></li>
+                        <li class="list"><a href="./search_and_replace.html">Search and Replace </a><span>medium</span></li>
+                        <li class="list"><a href="./sorted_union.html">Sorted Union</a><span>medium</span></li>
+                        <li class="list"><a href="./spinal_tap_case.html">Spinal Tap Case</a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_odd_fibonacci_numbers.html">Sum All Odd Fibonacci Numbers</a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_primes.html">Sum All Primes</a><span>easy</span></li>
+                        <li class="list"><a href="./roman_to_integer.html">Roman to Integer</a><span>easy</span></li>
+                        <li class="list"><a href="./sign_of_the_product_of_an_array.html">Sign of the Product of an Array</a><span>easy</span></li>
+                        <li class="list"><a href="./caesars_cipher.html">Caesars Cipher</a><span>high</span></li>
+                        <li class="list"><a href="./cash_register.html">Cash Register</a><span>high</span></li>
+                        <li class="list"><a href="./palindrome_checker.html">Palindrome Checker</a><span>high</span></li>
+                        <li class="list"><a href="./telephone_number_validator.html">Telephone Number Validator</a><span>high</span></li>
+                        <li class="list"><a href="./smallest_common_multiple.html">Smallest Common Multiple</a><span>high</span></li>
+
+                    </ul>
+                </aside>
+              
+            </div>
+            <div class="main-page col-lg-9 pt-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container"><!--START SECCION PRINCIPAL DE LA PAGINA-->
+                               
+                            <h1 id="challenge">Pig Latin <span>medium</span></h1>
+                            <hr>
+                            <p>
+                                Pig Latin is a way of altering English Words. The rules are as follows: <br>
+                                - If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add ay to it. <br>
+                                - If a word begins with a vowel, just add way at the end. <br>
+                            </p>
+                            <h2 id="test">Test</h2>
+                            <p>
+                                <span>Passed: </span>translatePigLatin("california") should return the string aliforniacay. <br>
+                                <span>Passed: </span>translatePigLatin("paragraphs") should return the string aragraphspay. <br>
+                                <span>Passed: </span>translatePigLatin("glove") should return the string oveglay. <br>
+                                <span>Passed: </span>translatePigLatin("algorithm") should return the string algorithmway. <br>
+                                <span>Passed: </span>translatePigLatin("eight") should return the string eightway. <br>
+                                <span>Passed: </span>Should handle words where the first vowel comes in the middle of the word. translatePigLatin("schwartz") should return the string artzschway. <br>
+                                <span>Passed: </span>Should handle words without vowels. translatePigLatin("rhythm") should return the string rhythmay. <br>
+                
+                            </p>
+                               <!--Accordion-->
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Proposed solution 1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <pre class="pre"><code class="adapt color">
+    function translatePigLatin(str) {
+        let result = "";
+        
+        if ( /^[^aeiou]/.test(str)){
+            let newstr = str.match(/^\w[^aeiou]*/)[0];
+            let newstrprueba = str.replace(/^\w[^aeiou]*/,'');
+            result = newstrprueba.concat(newstr+"ay");
+            
+        }else 
+            {
+            result = str.concat("way")
+            
+            }
+            console.log(result)
+            return result
+        }
+        
+        console.log(translatePigLatin("consonant"));
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <section class="container parche"></section>
+                        </div><!--END MAIN SECTION -->
+                    </div> 
+                </div>
+                </div>
+            </div>
+        </div><!--end row-->       
+
+    </div> <!--End div main-container-->
+
+    <footer>
+        <p>JavaScript | NoteBook 2023 &#169; made by yoanDiaval</p> 
+    </footer>
+     
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>

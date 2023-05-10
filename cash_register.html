@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript|NoteBook</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sass/styles.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand logo" href="./landing-page.html"><span class="span-logo">JavaScript/</span>NoteBook</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item"><a class="nav-link " href="./index.html">Main</a></li>
+                    <li class="nav-item "><a class="nav-link" href="./theory.html">Theory</a></li>
+                    <li class="nav-item dropdown hide-m"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Challenges</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./easy.html">Easy level</a></li>
+                            <li><a class="dropdown-item" href="./medium.html">Medium level</a></li>
+                            <li><a class="dropdown-item" href="./high.html">High level</a></li>
+                          </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </nav>
+    
+    <div class="container-fluid ajuste-top test-toda-pantalla">
+        <div class="row">
+            <div class="bg-aside col-lg-3 pt-4">
+                <aside class="visibility">
+                    <h2>List of challenges</h2>
+                    <hr>
+                    <div id="control-btn-group" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button id="btn-all" type="button" class="btn btn-primary">All</button>
+                        <button id="btn-easy" type="button" class="btn btn-success">Easy</button>
+                        <button id="btn-medium" type="button" class="btn btn-warning">Medium</button>
+                        <button id="btn-high" type="button" class="btn btn-danger">High</button>
+                    </div>
+                    <ul id="challenges_list" class="challenges_list">
+                        <li class="list"><a href="./abcdario.html" >Abcdario</a><span>medium</span></li>
+                        <li class="list"><a href="./convert_html_entities.html">Convert HTML Entities</a><span>easy</span></li>
+                        <li class="list"><a href="./pig_latin.html">Pig Latin</a><span>medium</span></li>
+                        <li class="list"><a href="./search_and_replace.html">Search and Replace</a><span>medium</span></li>
+                        <li class="list"><a href="./sorted_union.html">Sorted Union</a><span>medium</span></li>
+                        <li class="list"><a href="./spinal_tap_case.html">Spinal Tap Case</a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_odd_fibonacci_numbers.html">Sum All Odd Fibonacci Numbers </a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_primes.html">Sum All Primes</a><span>easy</span></li>
+                        <li class="list"><a href="./roman_to_integer.html">Roman to Integer</a><span>easy</span></li>
+                        <li class="list"><a href="./sign_of_the_product_of_an_array.html">Sign of the Product of an Array</a><span>easy</span></li>
+                        <li class="list"><a href="./caesars_cipher.html">Caesars Cipher</a><span>high</span></li>
+                        <li class="list active"><a href="./cash_register.html">Cash Register</a><span>high</span></li>
+                        <li class="list"><a href="./palindrome_checker.html">Palindrome Checker</a><span>high</span></li>
+                        <li class="list"><a href="./telephone_number_validator.html">Telephone Number Validator</a><span>high</span></li>
+                        <li class="list"><a href="./smallest_common_multiple.html">Smallest Common Multiple</a><span>high</span></li>
+
+                    </ul>
+                </aside>
+              
+            </div>
+            <div class="main-page col-lg-9 pt-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container"><!--START SECCION PRINCIPAL DE LA PAGINA-->
+                            <h1 id="challenge">Cash Register <span>high</span></h1>
+                            <hr>
+                            <p>
+                                Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument. <br>
+
+                                cid is a 2D array listing available currency. <br>
+
+                                The checkCashRegister() function should always return an object with a status key and a change key. <br>
+
+                                Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less than the change due, or if you cannot return the exact change. <br>
+
+                                Return {status: "CLOSED", change: [...]} with cash-in-drawer as the value for the key change if it is equal to the change due. <br>
+
+                                Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills, sorted in highest to lowest order, as the value of the change key. <br><br>
+                            </p>
+
+                            <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Current</th>
+                                    <th scope="col">Unit</th> 
+                                    <th scope="col">Amount</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Penny</td>
+                                    <td>$0.01</td>
+                                    <td>(PENNY)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Nickel	</td>
+                                    <td>$0.05</td>
+                                    <td>(NICKEL)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td >Dime</td>
+                                    <td>$0.1</td>
+                                    <td>(DIME)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>Quarter</td>
+                                    <td>$0.25</td>
+                                    <td>(QUARTER)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td >Dollar</td>
+                                    <td>$1</td>
+                                    <td>(ONE)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">6</th>
+                                    <td>Five Dollars</td>
+                                    <td>$5</td>
+                                    <td>(FIVE)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">7</th>
+                                    <td >Ten Dollars</td>
+                                    <td>$10</td>
+                                    <td>(TEN)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">8</th>
+                                    <td >Twenty Dollars</td>
+                                    <td>$20</td>
+                                    <td>(TWENTY)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">9</th>
+                                    <td>One-hundred Dollars</td>
+                                    <td>$100</td>
+                                    <td>(ONE HUNDRED)</td>
+                                  </tr>
+    
+                                
+                                </tbody>
+                              </table>
+
+
+                            <p>See below for an example of a cash-in-drawer array: <br><br>
+                                [
+                                ["PENNY", 1.01],
+                                ["NICKEL", 2.05],
+                                ["DIME", 3.1],
+                                ["QUARTER", 4.25],
+                                ["ONE", 90],
+                                ["FIVE", 55],
+                                ["TEN", 20],
+                                ["TWENTY", 60],
+                                ["ONE HUNDRED", 100]
+                                ]
+                                
+
+
+                            </p>
+
+                            <h2 id="test">Test</h2>
+                            <p>
+                                checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return an object. <br>
+                                <span>Passed: </span>checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return {status: "OPEN", change: [["QUARTER", 0.5]]}.<br>
+                                <span>Passed: </span>checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}. <br>
+                                <span>Passed: </span>checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) should return {status: "INSUFFICIENT_FUNDS", change: []}. <br>
+                                <span>Passed: </span>checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) should return {status: "INSUFFICIENT_FUNDS", change: []}. <br>
+                                <span>Passed: </span>checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) should return {status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]}.
+                                <br>
+                        
+                
+                            </p>
+
+                                <!--Accordion-->
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Proposed solution 1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <pre class="pre"><code class="adapt color">
+function checkCashRegister(price, cash, cid) {
+    let dev = cash - price;
+    let obj = {status:"", change:[]}
+    let value;
+    
+    
+    let newArr = [];
+    for(let i=cid.length-1; i>=0; i--){
+        let bill;
+        switch(cid[i][0]){
+        case "PENNY": bill = 0.01; break;
+        case "NICKEL": bill = 0.05; break;
+        case "DIME": bill = 0.1; break;
+        case "QUARTER": bill = 0.25; break;
+        case "ONE": bill = 1; break;
+        case "FIVE": bill = 5; break;
+        case "TEN": bill = 10; break;
+        case "TWENTY": bill = 20; break;
+        case "ONE HUNDRED": bill = 100; break;
+        }
+        if(dev >= cid[i][1] && cid[i][1]!==0){
+        dev = dev.toFixed(2)-cid[i][1];
+        value = cid[i][1];
+        newArr= [cid[i][0],value];
+        obj.change.push(newArr)
+        cid[i][1] = 0;
+        }else if(dev &lt; cid[i][1]){
+        let condition = dev/bill;
+        let need = Math.floor(condition);
+        if(condition >= 1 && cid[i][1] >= need*bill){
+        
+            dev = dev.toFixed(2) - (need*bill).toFixed(2);
+            value = Number((need*bill).toFixed(2));
+            newArr= [cid[i][0],value];
+            obj.change.push(newArr)
+            cid[i][1] = cid[i][1] - (need*bill).toFixed(2);
+        }else if(cid[i][1] &lt; need*bill){
+            dev = dev - cid[i][1];
+            value = cid[i][1];
+            newArr= [cid[i][0],value];
+            obj.change.push(newArr)
+            cid[i][1] = 0;
+        }
+        }
+        
+        dev = dev.toFixed(2)-0;
+    } //end for
+    
+    //Validacion de la caja en cero 
+    let arrCashBox =[];
+    for(let i=0; i&lt;cid.length; i++){
+        arrCashBox.push(cid[i][1])
+    }
+    
+    
+    if(dev==0 && !arrCashBox.every((item)=>{return item==0})){
+        obj.status = "OPEN";
+        
+    } else if (dev==0 && arrCashBox.every((item)=>{return item==0})){
+        obj.status = "CLOSED";
+        for(let i=0; i&lt;cid.length; i++){
+            if(cid[i][0]==obj.change[0][0]){
+            console.log("entre")
+            cid[i][1] = obj.change[0][1];
+            }
+        obj.change = cid
+    
+        }
+        
+        
+    } else if(dev!==0){
+        obj.status = "INSUFFICIENT_FUNDS";
+        obj.change = [];
+    }
+    
+    return obj
+    
+    }//End function
+    
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        <section class="container parche"></section>
+                        </div><!--END MAIN SECTION -->
+                    </div> 
+                </div>
+                </div>
+            </div>
+        </div><!--end row-->       
+
+    </div> <!--End div main-container-->
+
+    <footer>
+        <p>JavaScript | NoteBook 2023 &#169; made by yoanDiaval</p> 
+    </footer>
+     
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>

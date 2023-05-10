@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript|NoteBook</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sass/styles.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand logo" href="./landing-page.html"><span class="span-logo">JavaScript/</span>NoteBook</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item"><a class="nav-link " href="./index.html">Main</a></li>
+                    <li class="nav-item "><a class="nav-link" href="./theory.html">Theory</a></li>
+                    <li class="nav-item dropdown hide-m"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Challenges</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./easy.html">Easy level</a></li>
+                            <li><a class="dropdown-item" href="./medium.html">Medium level</a></li>
+                            <li><a class="dropdown-item" href="./high.html">High level</a></li>
+                          </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </nav>
+    
+    <div class="container-fluid ajuste-top test-toda-pantalla">
+        <div class="row">
+            <div class="bg-aside col-lg-3 pt-4">
+                <aside class="visibility">
+                    <h2>List of challenges</h2>
+                    <hr>
+                    <div id="control-btn-group" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button id="btn-all" type="button" class="btn btn-primary">All</button>
+                        <button id="btn-easy" type="button" class="btn btn-success">Easy</button>
+                        <button id="btn-medium" type="button" class="btn btn-warning">Medium</button>
+                        <button id="btn-high" type="button" class="btn btn-danger">High</button>
+                    </div>
+                    <ul id="challenges_list" class="challenges_list">
+                        <li class="list"><a href="./abcdario.html" >Abcdario</a><span>medium</span></li>
+                        <li class="list"><a href="./convert_html_entities.html">Convert HTML Entities</a><span>easy</span></li>
+                        <li class="list"><a href="./pig_latin.html">Pig Latin</a><span>medium</span></li>
+                        <li class="list"><a href="./search_and_replace.html">Search and Replace</a><span>medium</span></li>
+                        <li class="list"><a href="./sorted_union.html">Sorted Union</a><span>medium</span></li>
+                        <li class="list"><a href="./spinal_tap_case.html">Spinal Tap Case</a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_odd_fibonacci_numbers.html">Sum All Odd Fibonacci Numbers </a><span>medium</span></li>
+                        <li class="list"><a href="./sum_all_primes.html">Sum All Primes</a><span>easy</span></li>
+                        <li class="list"><a href="./roman_to_integer.html">Roman to Integer</a><span>easy</span></li>
+                        <li class="list"><a href="./sign_of_the_product_of_an_array.html">Sign of the Product of an Array</a><span>easy</span></li>
+                        <li class="list"><a href="./caesars_cipher.html">Caesars Cipher</a><span>high</span></li>
+                        <li class="list"><a href="./cash_register.html">Cash Register </a><span>high</span></li>
+                        <li class="list"><a href="./palindrome_checker.html">Palindrome Checker</a><span>high</span></li>
+                        <li class="list"><a href="./telephone_number_validator.html">Telephone Number Validator</a><span>high</span></li>
+                        <li class="list active"><a href="./smallest_common_multiple.html">Smallest Common Multiple</a><span>high</span></li>
+
+                    </ul>
+                </aside>
+              
+            </div>
+            <div class="main-page col-lg-9 pt-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container"><!--START SECCION PRINCIPAL DE LA PAGINA-->
+                            <h1 id="challenge">Smallest Common Multiple <span>high</span></h1>
+                            <hr>
+                            <p>
+                                Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters. <br><br>
+
+                                The range will be an array of two numbers that will not necessarily be in numerical order. <br><br>
+
+                                For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6. <br><br>
+                                                            </p>
+                            <h2 id="test">Test</h2>
+                            <p>
+                                smallestCommons([1, 5]) should return a number. <br>
+                                Waiting:smallestCommons([1, 5]) should return 60. <br>
+                                Waiting:smallestCommons([5, 1]) should return 60. <br>
+                                Waiting:smallestCommons([2, 10]) should return 2520. <br>
+                                Waiting:smallestCommons([1, 13]) should return 360360. <br>
+                                Waiting:smallestCommons([23, 18]) should return 6056820. <br>
+                            </p>
+
+                                <!--Accordion-->
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Proposed solution 1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <pre class="pre"><code class="adapt color">
+function smallestCommons(arr) {
+arr.sort(function(a,b){return a-b;})
+let max_mult = 1;
+
+let newArr =[];
+for(let i=arr[0]; i&lt;=arr[arr.length-1];i++){
+    newArr.push(i);
+}
+console.log(newArr)
+for(let i=1; i&lt;=arr[arr.length-1]; i++){
+    max_mult *= i; 
+}
+
+for(let i=arr[1]; i&lt;=max_mult; i+=arr[1]){
+    let contZero = 0;
+    for(let j=arr[0]; j&lt;=arr[1]; j++){
+    if(i%j===0){
+    contZero++;
+    }
+    }
+
+    if(contZero===newArr.length){
+    console.log(i);
+    break;
+    }
+}
+
+
+
+    return arr;
+}
+
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Proposed solution 2
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <pre class="pre"><code class="adapt"> 
+function smallestCommons(arr) {
+    // Setup
+    const [min, max] = arr.sort((a, b) => a - b);
+    const range = Array(max - min + 1)
+        .fill(0)
+        .map((_, i) => i + min);
+    // Largest possible value for SCM
+    const upperBound = range.reduce((prod, curr) => prod * curr);
+    // Test all multiples of 'max'
+    for (let multiple = max; multiple&lt;= upperBound; multiple += max) {
+        // Check if every value in range divides 'multiple'
+        const divisible = range.every((value) => multiple % value === 0);
+        if (divisible) {
+        return multiple;
+        }
+    }
+    }
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Proposed solution 3
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <pre class="pre"><code class="adapt">
+function smallestCommons(arr) {
+    // Setup
+    const [min, max] = arr.sort((a, b) => a - b);
+    const range = Array(max - min + 1)
+        .fill(0)
+        .map((_, i) => i + min);
+    // Largest possible value for SCM
+    const upperBound = range.reduce((prod, curr) => prod * curr);
+    // Test all multiples of 'max'
+    for (let multiple = max; multiple &lt;= upperBound; multiple += max) {
+        // Check if every value in range divides 'multiple'
+        const divisible = range.every((value) => multiple % value === 0);
+        if (divisible) {
+        return multiple;
+        }
+    }
+    }
+                                        </code></pre>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                Proposed solution 3
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                            <pre class="pre"><code class="adapt">
+function smallestCommons(arr) {
+    const primeFactors = {};
+    const [min, max] = arr.sort((a, b) => a - b);
+    for (let i = min; i &lt;= max; i++) {
+        // Factorize number in range
+        const currentFactors = getPrimeFactors(i);
+        for (let prime in currentFactors) {
+        // Add factor to set or update number of occurrences
+        if (!primeFactors[prime] || currentFactors[prime] > primeFactors[prime]) {
+            primeFactors[prime] = currentFactors[prime]
+        }
+        }
+    }
+    // Build SCM from factorization
+    let multiple = 1;
+    for (let prime in primeFactors) {
+        multiple *= prime ** primeFactors[prime];
+    }
+    return multiple;
+    }
+    
+    // Compute prime factors of a number
+    function getPrimeFactors(num) {
+    const factors = {};
+    for (let i = 2; i &lt;= num; i++) {
+        // Count occurances of factor
+        // Note that composite values will not divide num
+        while ((num % i) === 0) {
+        factors[i] = (factors[i]) ? factors[i] + 1 : 1;
+        num /= i;
+        }
+    }
+    return factors;
+    }
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        <section class="container parche"></section>
+                        </div><!--END MAIN SECTION -->
+                    </div> 
+                </div>
+                </div>
+            </div>
+        </div><!--end row-->       
+
+    </div> <!--End div main-container-->
+
+    <footer>
+        <p>JavaScript | NoteBook 2023 &#169; made by yoanDiaval</p> 
+    </footer>
+     
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>

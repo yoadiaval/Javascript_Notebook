@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./sass/styles.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand logo" href="./landing-page.html"><span class="span-logo">JavaScript/</span>NoteBook</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item"><a class="nav-link active text-white" href="./index.html">Main</a></li>
+                    <li class="nav-item "><a class="nav-link" href="./theory.html">Theory</a></li>
+                    <li class="nav-item dropdown hide-m"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Challenges</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./easy.html">Easy level</a></li>
+                            <li><a class="dropdown-item" href="./medium.html">Medium level</a></li>
+                            <li><a class="dropdown-item" href="./high.html">High level</a></li>
+                          </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </nav>
+    
+    <div class="container-fluid ajuste-top">
+        <div class="row">
+            <div class="bg-aside col-lg-3 pt-4">
+                <aside class="visibility">
+                        <h2>List of challenges</h2>
+                        <hr>
+                        <div id="control-btn-group" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button id="btn-all" type="button" class="btn btn-primary">All</button>
+                            <button id="btn-easy" type="button" class="btn btn-success">Easy</button>
+                            <button id="btn-medium" type="button" class="btn btn-warning">Medium</button>
+                            <button id="btn-high" type="button" class="btn btn-danger">High</button>
+                        </div>
+                        <ul id="challenges_list" class="challenges_list">
+                            <li class="list"><a href="./abcdario.html" >Abcdario</a><span>medium</span></li>
+                            <li class="list"><a href="./convert_html_entities.html">Convert HTML Entities</a><span>easy</span></li>
+                            <li class="list"><a href="./pig_latin.html">Pig Latin</a><span>medium</span></li>
+                            <li class="list"><a href="./search_and_replace.html">Search and Replace</a><span>medium</span></li>
+                            <li class="list"><a href="./sorted_union.html">Sorted Union</a><span>medium</span></li>
+                            <li class="list"><a href="./spinal_tap_case.html">Spinal Tap Case</a><span>medium </span></li>
+                            <li class="list"><a href="./sum_all_odd_fibonacci_numbers.html">Sum All Odd Fibonacci Numbers</a><span>medium</span></li>
+                            <li class="list"><a href="./sum_all_primes.html">Sum All Primes</a><span>easy</span></li>
+                            <li class="list"><a href="./roman_to_integer.html">Roman to Integer</a><span>easy</span></li>
+                            <li class="list"><a href="./sign_of_the_product_of_an_array.html">Sign of the Product of an Array </a><span>easy</span></li>
+                            <li class="list"><a href="./caesars_cipher.html">Caesars Cipher</a><span>high</span></li>
+                            <li class="list"><a href="./cash_register.html">Cash Register</a><span>high</span></li>
+                            <li class="list"><a href="./palindrome_checker.html">Palindrome Checker </a><span>high</span></li>
+                            <li class="list"><a href="./telephone_number_validator.html">Telephone Number Validator</a><span>high</span></li>
+                            <li class="list"><a href="./smallest_common_multiple.html">Smallest Common Multiple</a><span>high</span></li>
+                        </ul>
+                </aside>
+              
+            </div>
+            <div class="main-page col-lg-9 pt-4">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="div-main ">
+                            <section>
+                                <h1 id="javascripNotebook"> JavaScript Notbook</h1>
+                                <hr>
+                                <p>
+                                    JavaScript Notebook is a site with a collection of exercises and solutions to test your knowledge on this subject. Here you will find an excellent way to practice with a view to a technical test
+
+                                    You will also find theoretical explanations and suggestions to learn this programming language in the shortest possible time and in the simplest way. I will leave the more technical concepts to more specialized sites that I will also suggest to you
+
+                                    The presentation has been made, you just need to get down to work. My suggestion: If you are just starting out, I recommend entrusting your guide to <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">FreeCodeCamp</a>, if you already have experience, then challenge yourself to complete each of the challenges on this site. You will never be stuck because I leave you the possible solutions, yes, always give yourself many opportunities to try.
+                                    
+                                    </p>
+                            </section>
+                            <section class="pb-5">
+                                <h2 id="javascripOverview">JavaScript Overview</h2>
+                                <hr>
+                                <p>Javascript is an object-oriented programming language. It is one of the languages ​​most used by FrontEnd developers to streamline the interfaces of a web application.</p>
+                
+                                <h3 id="lanzamiento">Launch</h3>
+                                <p>It was released on December 4, 1995 by Netscape Communications, Mozzilla Foundation.
+                                </p>
+                
+                                <p>The last stable version developed took place in ECMAScript 2021 (June 1, 2021)</p>
+                
+                                <h3 id="materia_estudio">Study material</h3>
+                                <p>There are numerous sources through which you can get a solid foundation of this language and be able to go deeper over time. However, a lot of information sometimes tends to lose us and leads us to get frustrated in the process. A guided learning from the simplest to the most complex is what is always recommended.</p>
+                
+                                <p><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">FreeCodeCamp</a> It is a website of a non-profit collective of interactive teaching accessible to everyone, with which you can get a lot of information and exercises on this and other languages. Its system is very interactive so you will learn by practicing <br><br>
+
+                                Something very positive is also that he gives you a certificate at the end of his course.</p>
+                            </section>
+                            
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="page-map">
+                            <div class="visibility">
+                                <h2>On this page</h2>
+                                <ul>
+                                <li><a href="#javascripNotebook">JavaScript Notbook</a></li> 
+                                    <li><a href="#javascripOverview">JavaScript Overview</a>
+                                        <ul>
+                                            <li><a href="#lanzamiento">Launch</a></li>
+                                            <li><a href="#materia_estudio">Study material</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div><!--end row-->       
+
+    </div> <!--End div main-container-->
+
+   
+
+    <footer>
+        <p>JavaScript | NoteBook 2023 &#169; made by yoanDiaval</p> 
+    </footer>
+    
+     
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>
