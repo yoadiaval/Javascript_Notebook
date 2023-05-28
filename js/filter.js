@@ -2,64 +2,54 @@ const all = document.getElementById("btn-all");
 const easy = document.getElementById("btn-easy");
 const medium = document.getElementById("btn-medium");
 const high = document.getElementById("btn-high");
+
+const arrBtn = [all, easy,medium, high];
 const lista = document.getElementById("challenges_list");
 
-for(let i=1; i<lista.childNodes.length; i+=2){
-    if(lista.childNodes[i].childNodes[1].textContent == "easy"){
-    lista.childNodes[i].childNodes[1].style.color="#5cb85c";
-    }else if(lista.childNodes[i].childNodes[1].textContent == "medium"){
-        lista.childNodes[i].childNodes[1].style.color="#f0ad4e";
-    }else {
-        lista.childNodes[i].childNodes[1].style.color="#d9534f";
-    }
-}
 
-
-all.addEventListener('click', ()=>{
-    for(let i=1; i<lista.childNodes.length; i+=2){
-       
-            lista.childNodes[i].classList.remove('filtro')
-        
-    }
-});
-
-easy.addEventListener('click', ()=>{
-    for(let i=1; i<lista.childNodes.length; i+=2){
-        if(lista.childNodes[i].childNodes[1].textContent!=="easy"){
-            lista.childNodes[i].classList.add('filtro')
-        }else{
-            lista.childNodes[i].classList.remove('filtro')
-        }
+lista.childNodes.forEach((item)=>{
+     if(item.childNodes[1].innerText === "easy"){
+        item.childNodes[1].style.color = "#5cb85c"
      }
-   
-});
-
-
-medium.addEventListener('click', ()=>{
-    for(let i=1; i<lista.childNodes.length; i+=2){
-        if(lista.childNodes[i].childNodes[1].textContent!=="medium"){
-            lista.childNodes[i].classList.add('filtro')
-        }else{
-            lista.childNodes[i].classList.remove('filtro')
-        }
+     if(item.childNodes[1].innerText === "medium"){
+        item.childNodes[1].style.color = "#f0ad4e"
+     }
+     if(item.childNodes[1].innerText === "high"){
+        item.childNodes[1].style.color = "#d9534f"
      }
 });
 
-high.addEventListener('click', ()=>{
-    for(let i=1; i<lista.childNodes.length; i+=2){
-        if(lista.childNodes[i].childNodes[1].textContent!=="high"){
-            console.log(`añadido ${lista.childNodes[i].childNodes[1].textContent}`)
-            lista.childNodes[i].classList.add('filtro')
-        }else{
-            lista.childNodes[i].classList.remove('filtro')
-            console.log(`removido ${lista.childNodes[i].childNodes[1].textContent}`)
-        }
-     }
-});
-
-
-
-
-
+arrBtn.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+      lista.childNodes.forEach((item)=>{
+            if(btn.getAttribute("id") === "btn-easy") {
+               if( item.childNodes[1].innerText !== "easy"){
+                item.classList.add("filtro")
+               }else{
+                item.classList.remove("filtro")
+               }
+                
+            }else if(btn.getAttribute("id") === "btn-medium") {
+                if( item.childNodes[1].innerText !== "medium"){
+                    item.classList.add("filtro")
+                   }else{
+                    item.classList.remove("filtro")
+                   }
+                   
+            }else if(btn.getAttribute("id") === "btn-high") {
+                if( item.childNodes[1].innerText !== "high"){
+                    item.classList.add("filtro")
+                   }else{
+                    item.classList.remove("filtro")
+                   }
+                   
+            }else{ 
+                item.classList.remove("filtro")
+            }
+                
+      });
+    });
+    
+})
 
 
