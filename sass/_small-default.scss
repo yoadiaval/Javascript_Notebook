@@ -42,11 +42,19 @@ i{
     margin-left: 4%;
 } 
 
+.btn_copy{
+    background-color: rgb(182, 182, 182);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
 .centrado-vertical{
     position: fixed;
     top: 15vh;
     z-index: -1;
-
 }
 
 footer{
@@ -57,7 +65,6 @@ footer{
    /* position: fixed;
     bottom: 0;*/
   
-
 }
 
 .parche{

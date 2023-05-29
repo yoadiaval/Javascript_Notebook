@@ -15,7 +15,28 @@ content.forEach((item)=>{
 })
 
 
+document.querySelectorAll("aside li").forEach((item)=>{
+  item.addEventListener('click', ()=>{
+   item.classList.add("active")
+  })
+})
 
+const btnCopy = document.querySelectorAll(".btn_copy")
+btnCopy.forEach((item)=>{
+    item.addEventListener('click', function(){
+       let contentToCopy = item.previousElementSibling.innerText;
+       //se cra un input auxiliar con el atributo value configurado con "contentToCopy"
+       var aux = document.createElement("input");
+       aux.setAttribute("value", contentToCopy);
+       document.body.appendChild(aux);
+       aux.select();
+       document.execCommand("copy");
+       document.body.removeChild(aux);
 
-const prueba = document.getElementsByClassName("levelPage");
-console.log(prueba)
+       this.innerText  = "Copiado";
+       this.style.backgroundColor = "green";
+       
+       //alert("codigo copiado...")
+
+    })
+})
